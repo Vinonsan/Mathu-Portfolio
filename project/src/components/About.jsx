@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import profileImage from '../assets/mathu.jpeg'; // Import the image
+import { FaDownload } from "react-icons/fa";
+
 import './About.css';
 
 function About() {
@@ -54,30 +56,38 @@ function About() {
               <span className="typing-cursor">|</span>
             </div>
             <p className="about-description">
-  Passionate <strong>Software Developer</strong>, <strong>Educator</strong>, and <strong>Graphic Designer</strong>,  
-  dedicated to building innovative solutions, creating stunning designs, and sharing knowledge  
-  to empower others.
-</p>
+              Passionate <strong>Software Developer</strong>, <strong>Educator</strong>, and <strong>Graphic Designer</strong>,
+              dedicated to building innovative solutions, creating stunning designs, and sharing knowledge
+              to empower others.
+            </p>
 
             <div className="social-icons-container">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a href="https://www.facebook.com/share/1A1jkLvpBo/" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FaFacebookF />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FaTwitter />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a href="https://www.linkedin.com/in/mathurika-jesuthas-4450aa296/" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FaLinkedinIn />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a href="https://github.com/Mathurika2000" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FaGithub />
               </a>
             </div>
+
+            <div className="cv-download-container">
+                <a href="/Mathurika.pdf" download="/Mathurika.pdf">
+                  <Button variant="danger" className="download-cv-btn">
+                    Download CV <FaDownload style={{ marginLeft: "8px" }} />
+                  </Button>
+                </a>
+              </div>
           </Col>
           <Col lg={6} className="about-image-container">
-            <img 
+            <img
               src={profileImage}
-              alt="Profile" 
+              alt="Profile"
               className="about-profile-image"
             />
           </Col>

@@ -35,25 +35,25 @@ function Footer() {
     {
       id: 1,
       icon: <FaGithub />,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/Mathurika2000',
       label: 'GitHub'
     },
     {
       id: 2,
       icon: <FaLinkedin />,
-      url: 'https://linkedin.com/in/yourprofile',
+      url: 'https://www.linkedin.com/in/mathurika-jesuthas-4450aa296/',
       label: 'LinkedIn'
     },
     {
       id: 3,
       icon: <FaFacebook />,
-      url: 'https://facebook.com/yourusername',
+      url: 'https://www.facebook.com/share/1A1jkLvpBo/',
       label: 'Facebook'
     },
     {
       id: 4,
       icon: <FaEnvelope />,
-      url: 'mailto:jesumathu11@gmail.com',
+      url: 'jesumathu11@gmail.com',
       label: 'Email'
     }
   ]
@@ -99,7 +99,7 @@ function Footer() {
                 Important Links
               </h4>
               <ul className="links-list">
-                <li><a href="#about">About Me</a></li>
+                <li><a href="/about">About Me</a></li>
                 <li><a href="#skills">My Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>

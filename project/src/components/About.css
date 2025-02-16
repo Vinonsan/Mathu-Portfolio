@@ -54,6 +54,11 @@
   opacity: 0.9;
   max-width: 600px;
 }
+.download-cv-btn {
+  background-color: #af0404 !important;
+  border-color: #af0404 !important;
+  margin-top: 20px;
+}
 
 /* Social Icons */
 .social-icons-container {

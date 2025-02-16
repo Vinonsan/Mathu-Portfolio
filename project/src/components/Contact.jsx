@@ -43,22 +43,22 @@ function Contact() {
       id: 3,
       icon: <FaLinkedin />,
       label: 'LinkedIn',
-      value: 'Mathurika',
-      link: 'https://linkedin.com/in/yourprofile'
+      value: 'Mathurika Jesuthas',
+      link: 'https://www.linkedin.com/in/mathurika-jesuthas-4450aa296/'
     },
     {
       id: 4,
       icon: <FaGithub />,
       label: 'GitHub',
-      value: 'MAthurika2000',
-      link: 'https://github.com/yourusername'
+      value: 'Mathurika2000',
+      link: 'https://github.com/Mathurika2000'
     },
     {
       id: 5,
       icon: <FaFacebook />,
       label: 'Facebook',
-      value: 'MAthurika Jesuthas',
-      link: 'https://facebook.com/yourusername'
+      value: 'Mathu Maathu',
+      link: 'https://www.facebook.com/share/1A1jkLvpBo/'
     },
     {
       id: 6,
