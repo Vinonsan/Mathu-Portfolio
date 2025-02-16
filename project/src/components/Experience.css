@@ -1,0 +1,226 @@
+.experience-section {
+  padding: 8rem 0;
+  background: #1c1c1c;
+  min-height: 100vh;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  color: #EEEEEE;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: #AF0404;
+  border-radius: 2px;
+}
+
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-card {
+  position: relative;
+  background: rgba(238, 238, 238, 0.02);
+  border: 1px solid rgba(175, 4, 4, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.experience-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: #AF0404;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #EEEEEE;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.experience-content {
+  flex-grow: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.role {
+  color: #EEEEEE;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.duration {
+  color: #AF0404;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  background: rgba(175, 4, 4, 0.1);
+  border-radius: 20px;
+}
+
+.company-info {
+  margin-bottom: 1.5rem;
+}
+
+.company {
+  color: #EEEEEE;
+  font-size: 1.1rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.location {
+  color: #EEEEEE;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities li {
+  color: #EEEEEE;
+  opacity: 0.9;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.responsibilities li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #AF0404;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(175, 4, 4, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+/* Hover Effects */
+.experience-card:hover {
+  transform: translateY(-5px);
+  border-color: #AF0404;
+  box-shadow: 0 10px 30px rgba(175, 4, 4, 0.2);
+}
+
+.experience-card:hover .experience-icon {
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 0 20px rgba(175, 4, 4, 0.3);
+}
+
+.experience-card:hover .card-overlay {
+  transform: translateX(100%);
+}
+
+/* Animation */
+.experience-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for cards */
+.experience-card:nth-child(1) { animation-delay: 0.2s; }
+.experience-card:nth-child(2) { animation-delay: 0.4s; }
+.experience-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .role {
+    font-size: 1.3rem;
+  }
+
+  .experience-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .experience-section {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .experience-card {
+    padding: 1.2rem;
+  }
+
+  .role {
+    font-size: 1.2rem;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+
+  .responsibilities li {
+    font-size: 0.9rem;
+  }
+} 

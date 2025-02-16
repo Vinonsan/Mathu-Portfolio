@@ -1,0 +1,282 @@
+.education-section {
+  padding: 8rem 0;
+  background: #1c1c1c;
+  min-height: 100vh;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  color: #EEEEEE;
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.title-icon {
+  color: #AF0404;
+  animation: rotate 4s linear infinite;
+}
+
+.education-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.education-item {
+  display: flex;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.education-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2rem;
+  position: relative;
+}
+
+.education-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(175, 4, 4, 0.1);
+  border: 2px solid #AF0404;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #AF0404;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline-line {
+  width: 2px;
+  height: calc(100% + 4rem);
+  background: linear-gradient(to bottom, #AF0404 50%, transparent 50%);
+  background-size: 100% 20px;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.education-content {
+  background: rgba(238, 238, 238, 0.03);
+  border: 1px solid rgba(175, 4, 4, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  flex-grow: 1;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.degree {
+  color: #EEEEEE;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.duration {
+  color: #EEEEEE;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.calendar-icon {
+  color: #AF0404;
+}
+
+.institution {
+  color: #AF0404;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inst-icon {
+  font-size: 1rem;
+}
+
+.description {
+  color: #EEEEEE;
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.achievements {
+  background: rgba(175, 4, 4, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.achievements h4 {
+  color: #EEEEEE;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.achievement-icon {
+  color: #AF0404;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  color: #EEEEEE;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.achievements li::before {
+  content: '•';
+  color: #AF0404;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.animated-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.animated-dots span {
+  width: 8px;
+  height: 8px;
+  background: #AF0404;
+  border-radius: 50%;
+  animation: pulse 1.5s ease infinite;
+}
+
+.animated-dots span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.animated-dots span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* Animations */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+.education-item:hover .education-icon {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 0 20px rgba(175, 4, 4, 0.3);
+}
+
+.education-item:hover .education-content {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(175, 4, 4, 0.15);
+  border-color: #AF0404;
+}
+
+/* Stagger Animation */
+.education-item:nth-child(1) { animation-delay: 0.2s; }
+.education-item:nth-child(2) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .education-icon-wrapper {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+
+  .education-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .duration {
+    justify-content: center;
+  }
+
+  .institution {
+    justify-content: center;
+  }
+
+  .achievements {
+    text-align: left;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .education-content {
+    padding: 1.5rem;
+  }
+
+  .degree {
+    font-size: 1.2rem;
+  }
+
+  .institution {
+    font-size: 1rem;
+  }
+}
